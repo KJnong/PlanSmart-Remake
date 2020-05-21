@@ -6,13 +6,14 @@ import TodoForm from "./components/TodoForm"
 class App extends Component {
   state = {
     todos: [
-      {content:'hello world'},
-      {content:'hello world'}
     ]
   }
 
   formInfo = (data)=>{
-    this.setState([...this.state, {todos:data}])
+    console.log(data);
+    
+    const todosNew = [...this.state.todos, data]
+    this.setState({todos: todosNew})
   }
   render() {
     return (

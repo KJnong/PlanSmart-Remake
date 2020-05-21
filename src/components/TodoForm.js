@@ -1,18 +1,15 @@
 import React, { Component } from 'react'
 
 class TodoForm extends Component {
-    state = { todo: "" };
+    state = { content: "" };
 
     changeHandler = (e) => {
-        this.setState({ todo: e.target.value })
+        this.setState({ content: e.target.value })
     }
 
     onSubmit = (e) => {
         e.preventDefault();
-        const data = this.state.todo
-        this.props.formInfo(data)
-        
-        
+        this.props.formInfo(this.state)
     }
 
     render() {
