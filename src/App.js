@@ -5,11 +5,14 @@ import TodoForm from "./components/TodoForm"
 
 class App extends Component {
   state = {
-    todo: null
+    todos: [
+      {content:'hello world'},
+      {content:'hello world'}
+    ]
   }
 
   formInfo = (data)=>{
-    this.setState({todo:data})
+    this.setState([...this.state, {todos:data}])
   }
   render() {
     return (
@@ -18,7 +21,7 @@ class App extends Component {
         <br/>
         <TodoForm formInfo ={this.formInfo}/>
         <div className="container">
-          <Todos data={this.state.todo}/>
+          <Todos data={this.state.todos}/>
         </div>
       </div>
     )
