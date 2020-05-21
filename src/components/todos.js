@@ -2,17 +2,17 @@ import React, { Component } from 'react'
 import '../css/Form.css'
 
 export default class todos extends Component {
-    render() {
 
+    render() {        
         const todos = this.props.data.map((todo) => {
             return (
-                <div>
+                <div key={todo.id}>
                      <ul class="collection with-header">
                     <li class="collection-item">
                     {todo.content}
-                    <a class="secondary-content">
+                    <button onClick={()=>{this.props.removeTodo(todo.id)}} class="secondary-content">
                         <i class="material-icons">Done</i>
-                    </a>
+                    </button>
                     </li>
                     </ul>
                 </div>

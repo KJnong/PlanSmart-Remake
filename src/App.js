@@ -11,9 +11,17 @@ class App extends Component {
 
   formInfo = (data)=>{
     console.log(data);
-    
+    data.id = Math.random()
     const todosNew = [...this.state.todos, data]
     this.setState({todos: todosNew})
+  }
+
+  removeTodo = (id) =>{
+    const todos = this.state.todos.filter((todo)=>{
+      return todo.id != id
+    })
+
+    this.setState({todos})
   }
   render() {
     return (
@@ -22,7 +30,7 @@ class App extends Component {
         <br/>
         <TodoForm formInfo ={this.formInfo}/>
         <div className="container">
-          <Todos data={this.state.todos}/>
+          <Todos data={this.state.todos} removeTodo = {this.removeTodo}/>
         </div>
       </div>
     )
