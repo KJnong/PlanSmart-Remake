@@ -1,0 +1,15 @@
+.input-field>label {
+    color: white;
+    size: 20px;
+}
+
+.collection .collection-item {
+    background-color: darkgrey;
+    color: white;
+    size: 30px;
+}
+
+.secondary-content {
+    float: right;
+    color: white;
+}

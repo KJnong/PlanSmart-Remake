@@ -6,7 +6,7 @@ export default function Navbar() {
     return (
         <nav style={style}>
             <div class="nav-wrapper">
-                <a href="#" class="brand-logo center"><h5>PlanSmart</h5></a>
+                <a class="brand-logo center"><h5>PlanSmart</h5></a>
             </div>
         </nav>
     )

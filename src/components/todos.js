@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../css/Form.css'
 
 export default class todos extends Component {
     render() {
@@ -9,7 +10,7 @@ export default class todos extends Component {
                      <ul class="collection with-header">
                     <li class="collection-item">
                     {todo.content}
-                    <a href="#!" class="secondary-content">
+                    <a class="secondary-content">
                         <i class="material-icons">Done</i>
                     </a>
                     </li>
