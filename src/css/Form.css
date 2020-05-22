@@ -13,3 +13,10 @@
     float: right;
     color:black;
 }
+
+.collection .collection-item {
+    background-color: darkgrey;
+    color: black;
+    size: 50px;
+    font-size: large;
+  }
