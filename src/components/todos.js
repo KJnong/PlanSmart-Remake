@@ -8,7 +8,7 @@ export default class todos extends Component {
 
     render() {
                 
-        const todos = JSON.parse(localStorage.getItem("todos") || "[]").map((todo) => {
+        const todos =  JSON.parse(localStorage.getItem("todos") || "[]").length? JSON.parse(localStorage.getItem("todos") || "[]").map((todo) => {
             return (
                 <div key={todo.id}>
                      <ul class="collection with-header">
@@ -22,7 +22,7 @@ export default class todos extends Component {
                 </div>
             )
 
-        })
+        }): (<h4 className="center">You have no outstanding Todo's!</h4>)
 
         return (
             <div>
