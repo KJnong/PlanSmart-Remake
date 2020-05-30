@@ -2,9 +2,13 @@ import React, { Component } from 'react'
 import '../css/Form.css'
 
 export default class todos extends Component {
+      componentWillReceiveProps(props){
+        localStorage.setItem("todos", JSON.stringify(props.data));
+      }
 
-    render() {        
-        const todos = this.props.data.map((todo) => {
+    render() {
+                
+        const todos = JSON.parse(localStorage.getItem("todos") || "[]").map((todo) => {
             return (
                 <div key={todo.id}>
                      <ul class="collection with-header">

@@ -5,12 +5,10 @@ import TodoForm from "./components/TodoForm"
 
 class App extends Component {
   state = {
-    todos: [
-    ]
+    todos: [...JSON.parse(localStorage.getItem("todos") || "[]")]
   }
 
   formInfo = (data)=>{
-    console.log(data);
     data.id = Math.random()
     const todosNew = [...this.state.todos, data]
     this.setState({todos: todosNew})
